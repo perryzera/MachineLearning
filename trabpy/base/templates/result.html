@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Classificador</title>
+</head>
+<body>
+    <h1>Resultados do Classificador</h1>
+    <p>Classificador: {{ classifier }}</p>
+    <p>Acurácia: {{ accuracy }}</p>
+    <p>Relatório de Classificação:</p>
+    <pre>{{ classification_report }}</pre>
+    <p>Matriz de Confusão:</p>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Matriz de Confusão">
+</body>
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #3498db;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        pre {
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</html>
